@@ -1,3 +1,5 @@
+<h1>My Golf Score App</h1>
+
 <?php
 
 /**
