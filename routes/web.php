@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/history', 'GolfController@listhistory');
+
 Route::get('/debug', function () {
     
         $debug = [

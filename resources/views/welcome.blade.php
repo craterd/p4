@@ -66,28 +66,17 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
             <div class="content">
                 <div class="title m-b-md">
                     My Golf Scores
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Score History</a>
-                    <a href="https://laracasts.com">Add a Score</a>
-                    <a href="https://laravel-news.com">Edit a Score</a>
-                    <a href="https://forge.laravel.com">List Courses</a>
-                    <a href="https://github.com/laravel/laravel">Handicap</a>
+                    <a href="/history">Score History</a>
+                    <a href="/add">Add a Score</a>
+                    <a href="/edit">Edit a Score</a>
+                    <a href="/courses">List Courses</a>
+                    <a href="/handicap">Handicap</a>
                 </div>
             </div>
         </div>
