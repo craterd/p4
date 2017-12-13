@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Score;
+use App\Player;
 
 class ScoresTableSeeder extends Seeder
 {
@@ -13,28 +14,34 @@ class ScoresTableSeeder extends Seeder
     public function run()
     {
         $scores = [
-            [88, 'Course1', 3, 5, 0, 22, 17, 7, 4, 290],
-            [90, 'Course2', 2, 7, 1, 25, 15, 9, 2, 300],
-            [85, 'Course3', 1, 2, 2, 23, 14, 11, 10, 310],
+            ['David Crater', 88, 'Course1', 3, 5, 0, 22, 17, 7, 4, 290],
+            ['Jon Crater', 90, 'Course2', 2, 7, 1, 25, 15, 9, 2, 300],
+            ['Andy Crater', 85, 'Course3', 1, 2, 2, 23, 14, 11, 10, 310],
         ];
     
         $count = count($scores);
         
         foreach ($scores as $key => $score) {
+            $name = explode(' ', $score[0]);
+            $firstName = $name[0];
+
+            $player_id = Player::where('first_name', '=', $firstName)->pluck('id')->first();
+
             Score::insert([
                 'created_at' => Carbon\Carbon::now()->subDays($count)->toDateTimeString(),
                 'updated_at' => Carbon\Carbon::now()->subDays($count)->toDateTimeString(),
                 'date' => Carbon\Carbon::now()->toDateTimeString(),
-                'score' => $score[0],
-                'course_name' => $score[1],
-                'birdies' => $score[2],
-                'bogies' => $score[3],
-                'eagles' => $score[4],
-                'putts' => $score[5],
-                'chips' => $score[6],
-                'fairways_hit' => $score[7],
-                'greens_in_regulation' => $score[8],
-                'longest_drive' => $score[9]
+                'player_id' => $player_id   ,
+                'score' => $score[1],
+                'course_name' => $score[2],
+                'birdies' => $score[3],
+                'bogies' => $score[4],
+                'eagles' => $score[5],
+                'putts' => $score[6],
+                'chips' => $score[7],
+                'fairways_hit' => $score[8],
+                'greens_in_regulation' => $score[9],
+                'longest_drive' => $score[10]
             ]);
             $count--;
         }

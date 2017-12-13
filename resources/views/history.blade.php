@@ -1,7 +1,9 @@
 @extends('layouts.master')
 
 @section('header')
-    <small>My Score History</small>
+    <div class="secondtitle">
+        My Score History
+    </div>
 @endsection
 
 @section('content')

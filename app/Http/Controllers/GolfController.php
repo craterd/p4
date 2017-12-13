@@ -22,4 +22,9 @@ class GolfController extends Controller
         $scores = Score::all();  //with('author')->get()->sortBy('author.last_name');
         return view('history')->with(['scores' => $scores]);
     }
+    public function listcourses()
+    {
+        $courses = Course::all();
+        return view('courses')->with(['courses' => $courses]);
+    }
 }

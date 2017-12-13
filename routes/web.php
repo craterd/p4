@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/history', 'GolfController@listhistory');
+Route::get('/courses', 'GolfController@listcourses');
 
 Route::get('/debug', function () {
     
