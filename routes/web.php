@@ -15,8 +15,10 @@ Route::get('/', function () {
     return view('enter');
 });
 
-Route::get('/history', 'GolfController@listhistory');
-Route::get('/courses', 'GolfController@listcourses');
+Route::get('/scores', 'GolfController@scores');
+Route::get('/scores/{player}', 'GolfController@scores');
+Route::get('/players', 'GolfController@players');
+Route::get('/courses', 'GolfController@courses');
 
 Route::get('/debug', function () {
     

@@ -73,6 +73,12 @@
         @stack('head');
     </head>
     <body>
+        <div class="links">
+            <a href="/">Home</a>
+            <a href="/scores">Scores</a>
+            <a href="/players">Players</a>
+            <a href="/courses">Courses</a>
+        </div>
         <div class="flex-center position-ref full-height">
             <div class="content">
                 <div class="title m-b-md">

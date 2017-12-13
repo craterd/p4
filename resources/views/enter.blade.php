@@ -6,10 +6,8 @@
 
 @section('content')
     <div class="links">
-        <a href="/history">Score History</a>
-        <a href="/add">Add a Score</a>
-        <a href="/edit">Edit a Score</a>
-        <a href="/courses">List Courses</a>
-        <a href="/handicap">Handicap</a>
+        <a href="/scores">Scores</a>
+        <a href="/players">Players</a>
+        <a href="/courses">Courses</a>
     </div>
 @endsection
