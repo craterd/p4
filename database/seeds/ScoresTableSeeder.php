@@ -17,6 +17,11 @@ class ScoresTableSeeder extends Seeder
             ['David Crater', 88, 'Course1', 3, 5, 0, 22, 17, 7, 4, 290],
             ['Jon Crater', 90, 'Course2', 2, 7, 1, 25, 15, 9, 2, 300],
             ['Andy Crater', 85, 'Course3', 1, 2, 2, 23, 14, 11, 10, 310],
+            ['David Crater', 99, 'Course3', 1, 2, 2, 23, 14, 11, 10, 310],
+            ['Andy Crater', 95, 'Course3', 1, 2, 2, 23, 14, 11, 10, 310],
+            ['Jon Crater', 91, 'Course3', 1, 2, 2, 23, 14, 11, 10, 310],
+            ['Matt Crater', 83, 'Course3', 1, 2, 2, 23, 14, 11, 10, 310],
+            ['Matt Crater', 88, 'Course3', 1, 2, 2, 23, 14, 11, 10, 310]
         ];
     
         $count = count($scores);
@@ -30,7 +35,7 @@ class ScoresTableSeeder extends Seeder
             Score::insert([
                 'created_at' => Carbon\Carbon::now()->subDays($count)->toDateTimeString(),
                 'updated_at' => Carbon\Carbon::now()->subDays($count)->toDateTimeString(),
-                'date' => Carbon\Carbon::now()->toDateTimeString(),
+                'date' => Carbon\Carbon::now()->subDays($count)->toDateTimeString(),
                 'player_id' => $player_id   ,
                 'score' => $score[1],
                 'course_name' => $score[2],

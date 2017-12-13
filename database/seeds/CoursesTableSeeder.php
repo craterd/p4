@@ -13,9 +13,14 @@ class CoursesTableSeeder extends Seeder
     public function run()
     {
         $courses = [
-            ['Course1', 132, 71, 6880],
-            ['Course2', 117, 69, 6500],
-            ['Course3', 120, 73, 7000],
+            ['War Eagle', 132, 71, 6880],
+            ['Bull Run', 117, 69, 6500],
+            ['Gettysburg', 120, 73, 7000],
+            ['Crooked Stick', 124, 75, 7200],
+            ['Torrey Pines', 121, 72, 7300],
+            ['Stonewall', 118, 71, 6780],
+            ['Winchester', 122, 70, 7300],
+            ['Quail Hollow', 124, 74, 7000],
         ];
     
         $count = count($courses);

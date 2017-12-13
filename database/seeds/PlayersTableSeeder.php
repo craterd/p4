@@ -14,10 +14,15 @@ class PlayersTableSeeder extends Seeder
     {
         # Array of player data to add
         $players = [
-            ['David', 'Crater', 0],
-            ['Jon', 'Crater', 0],
-            ['Andy', 'Crater', 0],
-            ['Matt', 'Crater', 0]
+            ['David', 'Crater', 15],
+            ['Jon', 'Crater', 10],
+            ['Andy', 'Crater', 7],
+            ['Matt', 'Crater', 5],
+            ['Tom', 'Brady', 12],
+            ['Phil', 'Mickelson', -3],
+            ['Arnold', 'Palmer', 1],
+            ['Jack', 'Nicklaus', 3],
+            ['Tiger', 'Woods', 0]
         ];
         $count = count($players);
 
