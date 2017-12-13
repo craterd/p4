@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('enter');
 });
 
 Route::get('/history', 'GolfController@listhistory');

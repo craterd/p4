@@ -20,9 +20,6 @@ class GolfController extends Controller
     public function listhistory()
     {
         $scores = Score::all();  //with('author')->get()->sortBy('author.last_name');
-        # Debugging output to check results
-        foreach ($scores as $score) {
-            dump($score->score.' on '.$score->date);
-        }
+        return view('history')->with(['scores' => $scores]);
     }
 }
