@@ -15,6 +15,13 @@ Route::get('/', function () {
     return view('enter');
 });
 
+Route::get('/removeplayer', 'GolfController@removeplayer');
+Route::get('/chooseplayer2', 'GolfController@chooseplayer2');
+Route::get('/deleteplayer/{player}', 'GolfController@deleteplayer');
+Route::get('/changeplayer', 'GolfController@changeplayer');
+Route::get('/editplayer/{player}', 'GolfController@editplayer');
+Route::get('/chooseplayer', 'GolfController@chooseplayer');
+Route::get('/newplayer', 'GolfController@newplayer');
 Route::get('/scores', 'GolfController@scores');
 Route::get('/scores/{player}', 'GolfController@scores');
 Route::get('/players', 'GolfController@players');

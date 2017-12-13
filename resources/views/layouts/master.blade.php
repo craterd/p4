@@ -12,9 +12,9 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
-        <!-- Styles -->
+<!-- Styles -->
         <style>
-            html, body {
+        html, body {
                 background-color: #fff;
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
@@ -55,6 +55,10 @@
                 font-size: 46px;
             }
 
+            .thirdtitle {
+                font-size: 14px;
+            }
+
             .links > a {
                 color: #636b6f;
                 padding: 0 25px;
@@ -69,9 +73,8 @@
                 margin-bottom: 30px;
             }
         </style>
-
-        @stack('head');
-    </head>
+        @stack('head')
+    </head>;
     <body>
         <div class="links">
             <a href="/">Home</a>

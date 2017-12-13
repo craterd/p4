@@ -11,7 +11,7 @@
         No history available
     @elseif($player == '')
         @foreach ($scores as $score)
-            <h3>{{ $score->player['first_name'] }} {{ $score->player['last_name'] }}</h3>
+            <a href="{{ url('/scores/'.$score->player['first_name'].$score->player['last_name']) }}"><h3>{{ $score->player['first_name'] }} {{ $score->player['last_name'] }}</h3></a>
             <h3>{{ $score->score }}   ({{ $score->date }})</h3>
             <br>
         @endforeach
